@@ -23,6 +23,7 @@ const logo = computed(() => {
 div.header
   img(
     :src="logo"
+    alt="Caio Costa"
   )
   div.icons
     q-icon(
@@ -44,7 +45,7 @@ div.header
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 60px 40px;
+  padding: 60px 0px;
   align-items: center;
 }
 
@@ -53,17 +54,5 @@ div.header
   flex-direction: row;
   gap: 5px;
   align-items: center
-}
-
-@media (min-width:1001px) {
-  nav {
-    display: none;
-  }
-}
-
-@media (max-width:1000px) {
-  .header {
-    padding: 30px 20px;
-  }
 }
 </style>

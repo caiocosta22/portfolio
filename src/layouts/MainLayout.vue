@@ -11,12 +11,19 @@ q-layout.container(
   )
     Header
   q-page-container
-    router-view
+    main
+      router-view
 </template>
 
 <style scoped>
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1240px;
+}
+
+@media screen and (max-width: 1240px) {
+  .container {
+    padding: 0px 40px;
+  }
 }
 </style>
