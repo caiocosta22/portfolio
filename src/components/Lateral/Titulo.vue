@@ -2,8 +2,9 @@
 </script>
 
 <template lang="pug">
-h2 Desenvolvedor <br> Front-End
-h3 simples e rápido.
+div
+  h2 Desenvolvedor <br> Front-End
+  h3 simples e rápido.
 </template>
 
 <style scoped>

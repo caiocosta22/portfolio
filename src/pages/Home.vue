@@ -1,6 +1,7 @@
 <script setup>
 import Titulo from "src/components/Lateral/Titulo.vue";
 import Menu from "src/components/Lateral/Menu.vue";
+import Sociais from "src/components/Lateral/Sociais.vue";
 </script>
 
 <template lang="pug">
@@ -8,6 +9,7 @@ section.principal
   section.lateral
     Titulo
     Menu
+    Sociais
 </template>
 
 <style scoped>

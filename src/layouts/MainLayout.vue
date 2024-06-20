@@ -6,7 +6,7 @@ import Header from "src/components/Header/Header.vue";
 q-layout.container(
   view="hHh lpr fff"
 )
-  q-header.container(
+  q-header.header(
     style="background: rgba(0,0,0,0);"
   )
     Header
@@ -21,8 +21,17 @@ q-layout.container(
   max-width: 1240px;
 }
 
+.header {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
 @media screen and (max-width: 1240px) {
   .container {
+    padding: 0px 40px;
+  }
+
+  .header {
     padding: 0px 40px;
   }
 }

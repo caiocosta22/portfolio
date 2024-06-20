@@ -39,9 +39,6 @@ ul
 </template>
 
 <style scoped>
-ul {
-  margin-top: 100px
-}
 
 li {
   margin-bottom: 10px;
@@ -74,18 +71,6 @@ span {
 li:not(.ativo):hover {
   font-weight: bold;
   transition: ease-in-out 0.3s;
-  transform: translate(20px, 0px);
 }
 
-li:not(.ativo):hover::before {
-  content: "";
-  color: var(--orange-light);
-  position: absolute;
-  top: 8px;
-  left: -20px;
-  background-color: var(--orange-light);
-  width: 10px;
-  height: 10px;
-  border-radius: 15px;
-}
 </style>
