@@ -45,7 +45,6 @@ div.header
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 60px 0px;
   align-items: center;
 }
 

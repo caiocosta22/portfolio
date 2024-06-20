@@ -10,29 +10,34 @@ q-layout.container(
     style="background: rgba(0,0,0,0);"
   )
     Header
-  q-page-container
-    main
-      router-view
+  q-page-container.pagina
+    router-view
 </template>
 
 <style scoped>
 .container {
   margin: 0 auto;
   max-width: 1240px;
+  height: 100vh;
 }
 
 .header {
   margin: 0 auto;
   max-width: 1240px;
+  height: 15%;
+  padding-top: 40px;
+}
+
+.pagina {
+  height: 85%;
 }
 
 @media screen and (max-width: 1240px) {
   .container {
     padding: 0px 40px;
   }
-
   .header {
-    padding: 0px 40px;
+    padding: 40px 20px
   }
 }
 </style>

@@ -16,7 +16,8 @@ section.principal
 .principal {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  gap: 100px
+  gap: 100px;
+  height: 100%;
 }
 
 .lateral {
