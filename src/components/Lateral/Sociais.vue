@@ -7,11 +7,11 @@ const toggle = ref($q.dark.isActive);
 
 const icones = ref([
   {
-    name: "fa-brands fa-github"
+    name: "fa-brands fa-github",
+    link: "https://github.com/caiocosta22"
   }, {
-    name: "fa-brands fa-linkedin"
-  }, {
-    name: "fa-solid fa-envelope"
+    name: "fa-brands fa-linkedin",
+    link: "https://www.linkedin.com/in/caiocosta22/"
   }
 ]);
 
@@ -23,18 +23,22 @@ const iconColor = computed(() => {
 
 <template lang="pug">
 div.flex
-  q-icon.icons(
+  a(
     v-for="icon in icones"
     :key="icon"
-    :name="icon.name"
-    size="md"
-    :color="iconColor"
+    :href="icon.link"
+    target="_blank"
   )
+    q-icon.icons(
+      :name="icon.name"
+      size="md"
+      :color="iconColor"
+    )
 </template>
 
 <style scoped>
 .flex {
-  gap: 10px
+  gap: 15px
 }
 .icons {
   cursor:pointer
