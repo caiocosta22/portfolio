@@ -31,7 +31,7 @@ const ativaMenu = (titulo) => {
 ul
   li(
     v-for="menu in menus"
-    :key="menu"
+    :key="menu.titulo"
     :class="{ ativo: menu.isAtivo }"
     @click="ativaMenu(menu.titulo)"
   )
@@ -69,5 +69,23 @@ span {
   width: 10px;
   height: 10px;
   border-radius: 15px
+}
+
+li:not(.ativo):hover {
+  font-weight: bold;
+  transition: ease-in-out 0.3s;
+  transform: translate(20px, 0px);
+}
+
+li:not(.ativo):hover::before {
+  content: "";
+  color: var(--orange-light);
+  position: absolute;
+  top: 8px;
+  left: -20px;
+  background-color: var(--orange-light);
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
 }
 </style>
