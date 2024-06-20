@@ -1,28 +1,37 @@
 <script setup>
 import { ref } from "vue";
 
+import { useMenuStore } from "src/stores/menu-store.js";
+
+const menuStore = useMenuStore();
+
 const menus = ref([
   {
     titulo: "sobre",
-    isAtivo: true
+    isAtivo: true,
+    id: 1
   },
   {
     titulo: "experiência",
-    isAtivo: false
+    isAtivo: false,
+    id: 2
   },
   {
     titulo: "projetos",
-    isAtivo: false
+    isAtivo: false,
+    id: 3
   },
   {
     titulo: "formação",
-    isAtivo: false
+    isAtivo: false,
+    id: 4
   }
 ]);
 
-const ativaMenu = (titulo) => {
+const ativaMenu = (objeto) => {
   menus.value.forEach((menu) => {
-    menu.titulo !== titulo ? menu.isAtivo = false : menu.isAtivo = true;
+    menu.titulo !== objeto.titulo ? menu.isAtivo = false : menu.isAtivo = true;
+    menuStore.setMenuAtual(objeto.id);
   });
 };
 </script>
@@ -33,7 +42,7 @@ ul
     v-for="menu in menus"
     :key="menu.titulo"
     :class="{ ativo: menu.isAtivo }"
-    @click="ativaMenu(menu.titulo)"
+    @click="ativaMenu(menu)"
   )
     span {{ menu.titulo }}
 </template>
