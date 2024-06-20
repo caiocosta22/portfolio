@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from "vue";
 import { useMenuStore } from "src/stores/menu-store.js";
-import { Titulo, Menu, Sociais, Sobre, Experiencia } from "src/router/index.js";
+import { Titulo, Menu, Sociais, Sobre, Experiencia, Projetos, Formacao } from "src/router/index.js";
 
 const menuStore = useMenuStore();
 const menuAtual = computed(() => { return menuStore.menuAtual; });
@@ -19,6 +19,12 @@ section.principal
     )
     Experiencia(
       v-if="menuAtual === 2 "
+    )
+    Projetos(
+      v-if="menuAtual === 3 "
+    )
+    Formacao(
+      v-if="menuAtual === 4 "
     )
 </template>
 

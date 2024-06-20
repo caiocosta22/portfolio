@@ -25,5 +25,7 @@ import Sociais from "src/components/Lateral/Sociais.vue";
 // Conteudo Principal
 import Sobre from "src/components/Conteudo/Sobre.vue";
 import Experiencia from "src/components/Conteudo/Experiencia.vue";
+import Projetos from "src/components/Conteudo/Projetos.vue";
+import Formacao from "src/components/Conteudo/Formacao.vue";
 
-export { Titulo, Menu, Sociais, Sobre, Experiencia };
+export { Titulo, Menu, Sociais, Sobre, Experiencia, Projetos, Formacao };

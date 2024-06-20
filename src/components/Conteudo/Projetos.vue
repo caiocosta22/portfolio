@@ -2,7 +2,7 @@
 </script>
 
 <template lang="pug">
-span oi
+span projetos
 </template>
 
 <style scoped>
