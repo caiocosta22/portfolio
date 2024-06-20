@@ -3,6 +3,7 @@ import Titulo from "src/components/Lateral/Titulo.vue";
 import Menu from "src/components/Lateral/Menu.vue";
 import Sociais from "src/components/Lateral/Sociais.vue";
 
+import Sobre from "src/components/Conteudo/Sobre.vue";
 import Experiencia from "src/components/Conteudo/Experiencia.vue";
 </script>
 
@@ -13,6 +14,7 @@ section.principal
     Menu
     Sociais
   section.conteudo
+    Sobre
     Experiencia
 </template>
 

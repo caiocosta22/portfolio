@@ -1,9 +1,5 @@
 <script setup>
-import { ref, computed } from "vue";
-import { useQuasar } from "quasar";
-const $q = useQuasar();
-
-const toggle = ref($q.dark.isActive);
+import { ref } from "vue";
 
 const icones = ref([
   {
@@ -14,10 +10,6 @@ const icones = ref([
     link: "https://www.linkedin.com/in/caiocosta22/"
   }
 ]);
-
-const iconColor = computed(() => {
-  return toggle.value ? "primary" : "secondary";
-});
 
 </script>
 
@@ -31,8 +23,8 @@ div.flex
   )
     q-icon.icons(
       :name="icon.name"
+      color="info"
       size="md"
-      :color="iconColor"
     )
 </template>
 
@@ -40,11 +32,13 @@ div.flex
 .flex {
   gap: 15px
 }
+
 .icons {
-  cursor:pointer
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
 }
+
 .icons:hover {
   transform: scale(1.3);
-  transition: ease-in-out 0.3s;
 }
 </style>
