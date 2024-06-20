@@ -28,3 +28,15 @@ export default route(function (/* { store, ssrContext } */) {
 
   return Router;
 });
+
+// Importações de Componentes
+
+// Menu Lateral
+import Titulo from "src/components/Lateral/Titulo.vue";
+import Menu from "src/components/Lateral/Menu.vue";
+import Sociais from "src/components/Lateral/Sociais.vue";
+// Conteudo Principal
+import Sobre from "src/components/Conteudo/Sobre.vue";
+import Experiencia from "src/components/Conteudo/Experiencia.vue";
+
+export { Titulo, Menu, Sociais, Sobre, Experiencia };
