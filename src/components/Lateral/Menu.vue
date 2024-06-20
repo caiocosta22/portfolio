@@ -53,11 +53,6 @@ span {
   font-size: 1.2rem;
 }
 
-span:hover {
-  transition: ease-in-out 0.1s;
-  font-weight: bold;
-}
-
 .ativo {
   font-weight: bold;
   transition: ease-in-out 0.3s;
