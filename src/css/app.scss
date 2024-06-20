@@ -28,19 +28,23 @@ ul {
 img {
   max-width: 100%;
   display: block;
+  transition: ease-in-out 0.3s;
 }
 
 body.body--dark {
   background-color: #27160b;
+  transition: ease-in-out 0.3s;
 }
 
 .body--dark {
   color: #f2f0e4;
-  $icon-color: #f2f0e4
+  $icon-color: #f2f0e4;
+  transition: ease-in-out 0.3s;
 }
 
 .body--light {
   background-color: #f2f0e4;
   color: #27160b;
   $icon-color: #27160b;
+  transition: ease-in-out 0.3s;
 }
