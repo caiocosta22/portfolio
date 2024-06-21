@@ -5,10 +5,19 @@ const jobs = ref([
   {
     empresa: "Agência Alastrar",
     titulo: "Desenvolvedor Fullstack",
-    descricao: "",
+    descricao: "Utilizando Vue 3 junto ao Quasar Framework para desenvolver landing pages e hotsites para empresas, criando e manipulando interfaces com o Figma Design, utilizando NODE para criar micro-serviços que comuniquem-se ao front. Deploys para servidores FTP via GitHub Actions.",
     icons: [
       {
-        name: ""
+        name: "fa-brands fa-vuejs"
+      },
+      {
+        name: "fa-brands fa-figma"
+      },
+      {
+        name: "fa-brands fa-sass"
+      },
+      {
+        name: "fa-brands fa-node-js"
       }
     ],
     tempo: "10/2023 - Atuando"
@@ -16,10 +25,19 @@ const jobs = ref([
   {
     empresa: "G2 Sistemas",
     titulo: "Desenvolvedor Back-End",
-    descricao: "",
+    descricao: "Atuei refatorando códigos de micro-serviços JAVA 8 para NODE, criando API REST para comunicação entre banco de dados e aplicações mobile voltada para entregas e vendas. Assim, também executando manutenção e otimização de Bancos de dados relacionais.",
     icons: [
       {
-        name: ""
+        name: "fa-brands fa-node-js"
+      },
+      {
+        name: "fa-brands fa-java"
+      },
+      {
+        name: "fa-solid fa-database"
+      },
+      {
+        name: "fa-brands fa-git-alt"
       }
     ],
     tempo: "07/2023 - 10/2023"
@@ -28,10 +46,19 @@ const jobs = ref([
     empresa: "G2 Sistemas",
     titulo: "Estagiário de Suporte",
     subtitulo: "Analista de Suporte",
-    descricao: "",
+    descricao: "Estágio: Prestei suporte helpdesk a sistemas ERP, CRM e PDV. Trabalhando com consultas e atualizações em bancos de dados relacionais (SQL SERVER e POSTGRES). <br> Analista: Trabalhei com bancos de dados relacionais em conjunto com power b.i para produzir relatórios para clientes. Além de ser responsável por testes de micro-serviços em JAVA 8.",
     icons: [
       {
-        name: ""
+        name: "fa-solid fa-phone"
+      },
+      {
+        name: "fa-solid fa-user"
+      },
+      {
+        name: "fa-solid fa-database"
+      },
+      {
+        name: "fa-solid fa-cloud"
       }
     ],
     tempo: "11/2021 - 07/2023"
@@ -39,10 +66,13 @@ const jobs = ref([
   {
     empresa: "Instituto Federal do Ceará",
     titulo: "Bolsista",
-    descricao: "",
+    descricao: "Atuação como técnico, responsável pela manutenção de computadores e vistoria  de sistemas do Campus desenvolvidos em PHP.",
     icons: [
       {
-        name: ""
+        name: "fa-solid fa-computer"
+      },
+      {
+        name: "fa-solid fa-microchip"
       }
     ],
     tempo: "04/2019 - 08/2019"
@@ -58,7 +88,9 @@ div.box(
   h6 {{ job.empresa }}
   div.grid
     div.textos
-      p {{ job.descricao }}
+      p(
+        v-html="job.descricao"
+      )
     div.cargo
       q-separator(
         vertical
@@ -69,13 +101,14 @@ div.box(
         h6.titulo-cargo(
           v-if="job.subtitulo"
         ) {{ job.subtitulo }}
-          div.icones
-            q-icon(
-              v-for="icon in job.icons"
-              :key="icon"
-              :name="icon.name"
-              size="md"
-            )
+        div.icones
+          q-icon(
+            v-for="icon in job.icons"
+            :key="icon"
+            :name="icon.name"
+            size="sm"
+            color="info"
+          )
   span {{ job.tempo }} <br>
   span
 </template>
@@ -102,10 +135,16 @@ span {
   margin-bottom: 20px
 }
 
+.box>span {
+  color: var(--orange-dark);
+  font-weight: bold;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  padding: 20px
+  padding: 20px;
+  gap: 20px
 }
 
 .textos {
@@ -128,5 +167,12 @@ h6 {
 .titulo-cargo {
   padding: 0px;
   font-size: 1rem;
+}
+
+.icones {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 10px;
 }
 </style>

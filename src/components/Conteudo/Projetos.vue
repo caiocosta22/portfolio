@@ -2,7 +2,7 @@
 </script>
 
 <template lang="pug">
-span projetos teste deploy
+span projetos
 </template>
 
 <style scoped>
