@@ -9,8 +9,7 @@
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
-    "build": "quasar build",
-    "deploy": "push-dir --dir=dist/spa --remote=gh-pages --branch=main"
+    "build": "quasar build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -20,9 +19,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@quasar/extras": "^1.16.4",
     "axios": "^1.2.1",
-    "gh-pages": "^6.1.1",
     "pinia": "^2.0.11",
-    "push-dir": "^0.4.1",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"
