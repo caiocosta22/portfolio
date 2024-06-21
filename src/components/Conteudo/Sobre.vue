@@ -2,7 +2,15 @@
 </script>
 
 <template lang="pug">
-p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+p Como uma clássica história de desenvolvedor de software, minha paixão pelo que faço nasce na infância repleta de tecnologia e aquela aspiração de poder trabalhar com isso um dia. Porém, sempre fui encantado por interfaces limpas, como elas são construídas e como o usuário se sente ao interagir. Meu principal objetivo é que você sinta um pouco isso também ao visualizar meus produtos. <br>
+p  Já trabalhei em produtos de pequeno e grande escopo como landing pages, hotsites e ecommerce para distribuidoras, lojistas, incorporadoras e construtoras. No desenvolvimento, atualmente, utilizo a tecnologia Vue 3 junto ao Quasar Framework, Figma Design para protótipos e KANBAN como workflow.
+p Tenho 22 anos, curso Análise e Desenvolvimento de Sistemas, estou estudando React com Typescript pela plataforma Origamid e participando do programa Santander Coders 2024, na trilha de Front-End, para conseguir conhecimentos em Angular.
+
+q-btn(
+  color="info"
+  style="border-radius:20px; border:1px solid #141414; box-shadow:none"
+)
+  span Download CV
 </template>
 
 <style scoped>
