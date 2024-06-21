@@ -46,7 +46,7 @@ const jobs = ref([
     empresa: "G2 Sistemas",
     titulo: "Estagiário de Suporte",
     subtitulo: "Analista de Suporte",
-    descricao: "Estágio: Prestei suporte helpdesk a sistemas ERP, CRM e PDV. Trabalhando com consultas e atualizações em bancos de dados relacionais (SQL SERVER e POSTGRES). <br> Analista: Trabalhei com bancos de dados relacionais em conjunto com power b.i para produzir relatórios para clientes. Além de ser responsável por testes de micro-serviços em JAVA 8.",
+    descricao: "<b>Estágio</b>: Prestei suporte helpdesk a sistemas ERP, CRM e PDV. Trabalhando com consultas e atualizações em bancos de dados relacionais (SQL SERVER e POSTGRES). <br> <b>Analista</b>: Trabalhei com bancos de dados relacionais em conjunto com power b.i para produzir relatórios para clientes. Além de ser responsável por testes de micro-serviços em JAVA 8.",
     icons: [
       {
         name: "fa-solid fa-phone"
