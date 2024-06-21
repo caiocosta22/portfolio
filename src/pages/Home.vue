@@ -33,12 +33,18 @@ section.principal
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 150px;
-  height: 100%;
+  height: 90%;
 }
 
 .lateral {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 170px;
+}
+
+@media screen and (max-height: 800px) {
+  .lateral {
+    gap: 120px;
+  }
 }
 </style>

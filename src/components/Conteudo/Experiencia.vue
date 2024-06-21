@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
-
+import { PerfectScrollbar } from "vue3-perfect-scrollbar";
+import "vue3-perfect-scrollbar/style.css";
 const jobs = ref([
   {
     empresa: "Agência Alastrar",
@@ -81,39 +82,46 @@ const jobs = ref([
 </script>
 
 <template lang="pug">
-div.box(
-  v-for="job in jobs"
-  :key="job"
-)
-  h6 {{ job.empresa }}
-  div.grid
-    div.textos
-      p(
-        v-html="job.descricao"
-      )
-    div.cargo
-      q-separator(
-        vertical
-        color="warning"
-      )
-      div.flex.column
-        h6.titulo-cargo {{ job.titulo }} <br>
-        h6.titulo-cargo(
-          v-if="job.subtitulo"
-        ) {{ job.subtitulo }}
-        div.icones
-          q-icon(
-            v-for="icon in job.icons"
-            :key="icon"
-            :name="icon.name"
-            size="sm"
-            color="info"
+PerfectScrollbar.scroll
+  div.container-box
+    div.box(
+      v-for="job in jobs"
+      :key="job"
+    )
+      h6 {{ job.empresa }}
+      div.grid
+        div.textos
+          p(
+            v-html="job.descricao"
           )
-  span {{ job.tempo }} <br>
-  span
+        div.cargo
+          q-separator(
+            vertical
+            color="warning"
+          )
+          div.flex.column
+            h6.titulo-cargo {{ job.titulo }} <br>
+            h6.titulo-cargo(
+              v-if="job.subtitulo"
+            ) {{ job.subtitulo }}
+            div.icones
+              q-icon(
+                v-for="icon in job.icons"
+                :key="icon"
+                :name="icon.name"
+                size="sm"
+                color="info"
+              )
+      span {{ job.tempo }} <br>
+      span
 </template>
 
 <style scoped>
+.scroll {
+  height: 90%;
+  width: 100%;
+}
+
 * {
   color: #141414;
   line-height: 1.25;
@@ -128,13 +136,25 @@ span {
   padding-left: 20px;
 }
 
+.ps {
+  height: 670px;
+}
+
+.container-box {
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px
+}
+
 .box {
   background-color: #fff;
   border-radius: 20px;
-  width: 100%;
-  margin-bottom: 25px;
+  width: 90%;
   border: 1px solid #000;
   position: relative;
+  margin: 0 auto;
 }
 
 .box::before{
@@ -195,5 +215,17 @@ h6 {
   flex-direction: row;
   gap: 10px;
   padding-top: 10px;
+}
+
+@media screen and (max-width: 1240px) {
+  .ps {
+    height: 550px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .ps {
+    height: 440px;
+  }
 }
 </style>
