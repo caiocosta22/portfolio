@@ -132,7 +132,22 @@ span {
   background-color: #fff;
   border-radius: 20px;
   width: 100%;
-  margin-bottom: 20px
+  margin-bottom: 25px;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.box::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: var(--orange-dark);
+  border-radius: 20px;
+  border: 1px solid #000;
+  width: 101%;
+  height: 105%;
+  left: -15px;
+  top: 5px;
 }
 
 .box>span {
