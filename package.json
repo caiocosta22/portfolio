@@ -11,8 +11,7 @@
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
     "build": "quasar build",
-    "predeploy": "quasar build",
-    "deploy": "gh-pages -d dist/spa"
+    "deploy": "quasar build && gh-pages -d dist/spa"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",

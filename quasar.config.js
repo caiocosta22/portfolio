@@ -59,7 +59,7 @@ module.exports = configure(function (/* ctx */) {
         node: "node16"
       },
 
-      vueRouterMode: "history", // available values: 'hash', 'history'
+      vueRouterMode: "history", // available values: 'hash', 'history',
       uglifyOptions: {
         compress: { drop_console: true }
       },
@@ -69,7 +69,7 @@ module.exports = configure(function (/* ctx */) {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      publicPath: "/",
+      publicPath: process.env.NODE_ENV === "production" ? "/<portfolio>/" : "/",
       // analyze: true,
       // env: {},
       // rawDefine: {}
