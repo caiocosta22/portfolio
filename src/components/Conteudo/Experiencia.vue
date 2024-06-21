@@ -5,7 +5,7 @@ const jobs = ref([
   {
     empresa: "Agência Alastrar",
     titulo: "Desenvolvedor Fullstack",
-    descricao: "Utilizando Vue 3 junto ao Quasar Framework para desenvolver landing pages e hotsites para empresas, criando e manipulando interfaces com o Figma Design, utilizando NODE para criar micro-serviços que comuniquem-se ao front. Deploys para servidores FTP via GitHub Actions.",
+    descricao: "Utilizando Vue 3 junto ao Quasar Framework para desenvolver landing pages e hotsites para empresas, criando e manipulando interfaces com o Figma Design, utilizando NODE para criar microsserviços que comuniquem-se ao front. Deploys para servidores FTP via GitHub Actions.",
     icons: [
       {
         name: "fa-brands fa-vuejs"
@@ -25,7 +25,7 @@ const jobs = ref([
   {
     empresa: "G2 Sistemas",
     titulo: "Desenvolvedor Back-End",
-    descricao: "Atuei refatorando códigos de micro-serviços JAVA 8 para NODE, criando API REST para comunicação entre banco de dados e aplicações mobile voltada para entregas e vendas. Assim, também executando manutenção e otimização de Bancos de dados relacionais.",
+    descricao: "Atuei refatorando códigos de microsserviços JAVA 8 para NODE, criando API REST para comunicação entre banco de dados e aplicações mobile voltada para entregas e vendas. Assim, também executando manutenção e otimização de Bancos de dados relacionais.",
     icons: [
       {
         name: "fa-brands fa-node-js"
@@ -46,7 +46,7 @@ const jobs = ref([
     empresa: "G2 Sistemas",
     titulo: "Estagiário de Suporte",
     subtitulo: "Analista de Suporte",
-    descricao: "<b>Estágio</b>: Prestei suporte helpdesk a sistemas ERP, CRM e PDV. Trabalhando com consultas e atualizações em bancos de dados relacionais (SQL SERVER e POSTGRES). <br> <b>Analista</b>: Trabalhei com bancos de dados relacionais em conjunto com power b.i para produzir relatórios para clientes. Além de ser responsável por testes de micro-serviços em JAVA 8.",
+    descricao: "<b>Estágio</b>: Prestei suporte helpdesk a sistemas ERP, CRM e PDV. Trabalhando com consultas e atualizações em bancos de dados relacionais (SQL SERVER e POSTGRES). <br> <b>Analista</b>: Trabalhei com bancos de dados relacionais em conjunto com power b.i para produzir relatórios para clientes. Além de ser responsável por testes de microsserviços em JAVA 8.",
     icons: [
       {
         name: "fa-solid fa-phone"
