@@ -144,10 +144,16 @@ span {
   background-color: var(--orange-dark);
   border-radius: 20px;
   border: 1px solid #000;
-  width: 101%;
+  width: 100.5%;
   height: 105%;
-  left: -15px;
-  top: 5px;
+  left: -8px;
+  top: 1px;
+  transform: translate(0, 0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.box:hover::before {
+  transform: translate(-6px, 6px);
 }
 
 .box>span {
