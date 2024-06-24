@@ -4,6 +4,7 @@ import { PerfectScrollbar } from "vue3-perfect-scrollbar";
 import "vue3-perfect-scrollbar/style.css";
 const projetos = ref([
   {
+    id: 1,
     titulo: "Portfólio",
     descricao: "Projeto pessoal com foco em apresentar minha identidade visual de forma simples.",
     imagem: "/images/projetos/portfolio.png",
@@ -15,6 +16,7 @@ const projetos = ref([
     link: "https://github.com/caiocosta22/portfolio"
   },
   {
+    id: 2,
     titulo: "Sistema Catálogo",
     descricao: "Sendo desevenvolvido para automatizar artes de catálogos de produtos para Agência Alastrar.",
     imagem: "/images/projetos/sistemacatalogo.png",
@@ -26,6 +28,7 @@ const projetos = ref([
     link: ""
   },
   {
+    id: 3,
     titulo: "Super Academy",
     descricao: "Landing Page promocional de eventos da empresa Super Supply com foco na venda de ingressos.",
     imagem: "/images/projetos/superacademy.png",
@@ -37,6 +40,7 @@ const projetos = ref([
     link: "https://superacademy.supersupply.com.br"
   },
   {
+    id: 4,
     titulo: "Galeam Incorporadora",
     descricao: "Site institucional da incorporadora, com foco em apresentar a empresa e seus principais projetos.",
     imagem: "/images/projetos/galeam.png",
@@ -47,6 +51,7 @@ const projetos = ref([
     link: "http://galeamgroup.com"
   },
   {
+    id: 5,
     titulo: "Super Supply",
     descricao: "Landing page institucional da distribuidora Super Supply, com foco em apresentar suas soluções e serviços para B2B.",
     imagem: "/images/projetos/supersupply.png",
@@ -56,6 +61,7 @@ const projetos = ref([
     link: "https://supersupply.com.br"
   },
   {
+    id: 6,
     titulo: "Web Form",
     descricao: "Pequeno protótipo de estudo de HTML e CSS proposto pelo programa Santander Coders 2024.",
     imagem: "/images/projetos/weform.png",
@@ -66,21 +72,44 @@ const projetos = ref([
     link: "https://github.com/caiocosta22/webform-frontend"
   }
 ]);
+
 const dialog = ref(false);
 const dialogs = ref([
   {
-    titulo: "",
-    texto: ""
+    id: 1,
+    titulo: "Portfólio",
+    texto: "<p> Em termos de Design, meu principal objetivo foi mostrar pro usuário minha identidade visual como nunca pude trabalhar em outros projetos antes. Por conta disso, utilizei tantas bordas pretas ao redor dos elementos de forma arrendoda, pra trazer uma sensação lúdica e confortável, amo ilustrações, e cartoons dos anos 30, eles carregam esse traço preto em volta dos personagens bem forte que quis adaptar para o projeto de alguma forma. </p> <img src='/images/projetos/cartoons.png' /> <p> <br> Outro grande desafio, com certeza foram as cores, passei horas no figma prototipando cores, principalmente, quando se trata de modo escuro, o modo claro sempre foi fácil de visualizar, por conta da minha paixão por tons pastéis, mas o escuro, foi um grande desafio que com certeza me levou muitas horas.</p> <img src='/images/projetos/cores.png' /> <br> <p> Quando chegamos no desenvolvimento, quis utilizar a componentização que o Vue me permite pra mostrar um pouco das minhas skills além da estilização, como os dialogos abertos ao clicar nos cards, o menu lateral reativo para gerar uma renderização dinâmica dos conteúdos, a utilização de um componente de scroll area para permitir o usuário explorar o conteúdo sem sair do foco do site, assim explorando um pouquinho do que aprendi nesse meu tempo como desenvolvedor front-end. </p>"
   },
   {
-    titulo: "",
-    texto: ""
+    id: 2,
+    titulo: "Sistema Catálogo",
+    texto: "lorem ipsum"
   },
   {
-    titulo: "",
-    texto: ""
+    id: 3,
+    titulo: "Super Academy",
+    texto: "lorem ipsum"
+  },
+  {
+    id: 4,
+    titulo: "Galeam Incorporadora",
+    texto: "lorem ipsum"
+  },
+  {
+    id: 5,
+    titulo: "Super Supply",
+    texto: "lorem ipsum"
+  },
+  {
+    id: 6,
+    titulo: "Web Form",
+    texto: "lorem ipsum"
   }
 ]);
+const filterDialog = (id) => {
+  dialogAtual.value = dialogs.value.filter((objeto) => objeto.id === id);
+};
+const dialogAtual = ref();
 </script>
 
 <template lang="pug">
@@ -94,7 +123,7 @@ PerfectScrollbar
         h6 {{ projeto.titulo }}
         q-icon.botao(
           name="fa-solid fa-expand"
-          @click="dialog = !dialog"
+          @click="dialog = !dialog, filterDialog(projeto.id)"
         )
       p {{ projeto.descricao }}
       div.imagem
@@ -117,9 +146,9 @@ q-dialog(
   v-model="dialog"
   backdrop-filter="blur(4px) saturate(150%)"
 )
-  q-card
+  q-card.dialog
     q-card-section.row.items-center
-      h6 Close icon
+      h3 {{ dialogAtual[0].titulo }}
       q-space
       q-btn(
         icon="close"
@@ -129,7 +158,9 @@ q-dialog(
         v-close-popup
       )
     q-card-section
-      p teste
+      p(
+        v-html="dialogAtual[0].texto"
+      )
 </template>
 
 <style scoped>
@@ -139,7 +170,7 @@ q-dialog(
   line-height: 1.25;
 }
 
-p, h6 {
+p, h6, h3 {
   margin: 0px;
 }
 
@@ -219,6 +250,16 @@ p {
 img {
   border-radius: 15px;
   border: 1px solid rgba(0,0,0,0.7);
+}
+
+.dialog {
+  width: 440px;
+  height: 640px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1240px) {
