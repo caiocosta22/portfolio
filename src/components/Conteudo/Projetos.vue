@@ -4,44 +4,66 @@ import { PerfectScrollbar } from "vue3-perfect-scrollbar";
 import "vue3-perfect-scrollbar/style.css";
 const projetos = ref([
   {
-    titulo: "",
-    descricao: "",
-    imagem: "",
+    titulo: "Portfólio",
+    descricao: "lorem ipsum",
+    imagem: "/images/projetos/portfolio.png",
     icons: [
       "fa-brands fa-vuejs",
-      ""
+      "fa-brands fa-sass",
+      "fa-brands fa-figma"
+    ],
+    link: "https://github.com/caiocosta22/portfolio"
+  },
+  {
+    titulo: "Sistema Catálogo",
+    descricao: "lorem ipsum",
+    imagem: "/images/projetos/sistemacatalogo.png",
+    icons: [
+      "fa-brands fa-vuejs",
+      "fa-brands fa-node-js",
+      "fa-solid fa-database"
     ],
     link: ""
   },
   {
-    titulo: "",
-    descricao: "",
-    imagem: "",
+    titulo: "Super Academy",
+    descricao: "lorem ipsum",
+    imagem: "/images/projetos/superacademy.png",
     icons: [
       "fa-brands fa-vuejs",
-      ""
+      "fa-brands fa-sass",
+      "fa-brands fa-figma"
     ],
-    link: ""
+    link: "https://superacademy.supersupply.com.br"
   },
   {
-    titulo: "",
-    descricao: "",
-    imagem: "",
+    titulo: "Galeam Incorporadora",
+    descricao: "lorem ipsum",
+    imagem: "/images/projetos/galeam.png",
     icons: [
       "fa-brands fa-vuejs",
-      ""
+      "fa-brands fa-sass"
     ],
-    link: ""
+    link: "http://galeamgroup.com"
   },
   {
-    titulo: "",
-    descricao: "",
-    imagem: "",
+    titulo: "Super Supply",
+    descricao: "lorem ipsum",
+    imagem: "/images/projetos/supersupply.png",
     icons: [
-      "fa-brands fa-vuejs",
-      ""
+      "fa-brands fa-vuejs"
     ],
-    link: ""
+    link: "https://supersupply.com.br"
+  },
+  {
+    titulo: "Web Form",
+    descricao: "lorem ipsum",
+    imagem: "/images/projetos/weform.png",
+    icons: [
+      "fa-brands fa-html5",
+      "fa-brands fa-css3-alt"
+    ],
+    link: "https://github.com/caiocosta22/webform-frontend"
   }
 ]);
 </script>
@@ -59,7 +81,10 @@ PerfectScrollbar
           name="fa-solid fa-expand"
         )
       p {{ projeto.descricao }}
-      p imagem do projeto
+      div.imagem
+        img(
+          :src="projeto.imagem"
+        )
       div.icones
         q-icon(
           v-for="icon in projeto.icons"
@@ -68,7 +93,10 @@ PerfectScrollbar
           color="info"
           size="sm"
         )
-      p.text-info <b> {{ projeto.link }} </b>
+      a.link(
+        :href="projeto.link"
+        target="_blank"
+      ) {{ projeto.link }}
 </template>
 
 <style scoped>
@@ -80,6 +108,12 @@ PerfectScrollbar
 
 p, h6 {
   margin: 0px;
+}
+
+.link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #141414;
 }
 
 .ps {
@@ -103,7 +137,9 @@ p, h6 {
   gap: 20px;
   position: relative;
   width: 90%;
-  margin: 0 auto
+  margin: 0 auto;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 10px;
 }
 
 .box::before{
@@ -139,6 +175,17 @@ p, h6 {
 
 .botao:hover {
   transform: scale(1.3);
+}
+
+.icones {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+img {
+  border-radius: 15px;
+  border: 1px solid rgba(0,0,0,0.7);
 }
 
 @media screen and (max-width: 1240px) {
