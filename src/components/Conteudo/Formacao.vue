@@ -83,10 +83,6 @@ p {
   transition: transform 0.3s ease-in-out;
 }
 
-.box:hover::before {
-  transform: translate(-6px, 6px);
-}
-
 .lista {
   margin-top: 40px;
   display: flex;

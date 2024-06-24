@@ -66,6 +66,21 @@ const projetos = ref([
     link: "https://github.com/caiocosta22/webform-frontend"
   }
 ]);
+const dialog = ref(false);
+const dialogs = ref([
+  {
+    titulo: "",
+    texto: ""
+  },
+  {
+    titulo: "",
+    texto: ""
+  },
+  {
+    titulo: "",
+    texto: ""
+  }
+]);
 </script>
 
 <template lang="pug">
@@ -79,6 +94,7 @@ PerfectScrollbar
         h6 {{ projeto.titulo }}
         q-icon.botao(
           name="fa-solid fa-expand"
+          @click="dialog = !dialog"
         )
       p {{ projeto.descricao }}
       div.imagem
@@ -97,6 +113,23 @@ PerfectScrollbar
         :href="projeto.link"
         target="_blank"
       ) {{ projeto.link }}
+q-dialog(
+  v-model="dialog"
+  backdrop-filter="blur(4px) saturate(150%)"
+)
+  q-card
+    q-card-section.row.items-center
+      h6 Close icon
+      q-space
+      q-btn(
+        icon="close"
+        flat
+        round
+        dense
+        v-close-popup
+      )
+    q-card-section
+      p teste
 </template>
 
 <style scoped>
