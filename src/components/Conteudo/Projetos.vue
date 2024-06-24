@@ -27,7 +27,7 @@ const projetos = ref([
   },
   {
     titulo: "Super Academy",
-    descricao: "Landing Page promocional de eventos com foco na venda de ingressos.",
+    descricao: "Landing Page promocional de eventos da empresa Super Supply com foco na venda de ingressos.",
     imagem: "/images/projetos/superacademy.png",
     icons: [
       "fa-brands fa-vuejs",
@@ -48,7 +48,7 @@ const projetos = ref([
   },
   {
     titulo: "Super Supply",
-    descricao: "Landing page institucional da distribuidora Super Supply, com foco em apresentar suas soluções e serviços.",
+    descricao: "Landing page institucional da distribuidora Super Supply, com foco em apresentar suas soluções e serviços para B2B.",
     imagem: "/images/projetos/supersupply.png",
     icons: [
       "fa-brands fa-vuejs"
@@ -108,6 +108,10 @@ PerfectScrollbar
 
 p, h6 {
   margin: 0px;
+}
+
+p {
+  font-size: 0.9rem;
 }
 
 .link {
