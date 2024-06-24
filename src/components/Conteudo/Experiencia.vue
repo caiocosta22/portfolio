@@ -82,7 +82,7 @@ const jobs = ref([
 </script>
 
 <template lang="pug">
-PerfectScrollbar.scroll
+PerfectScrollbar
   div.container-box
     div.box(
       v-for="job in jobs"
@@ -117,10 +117,6 @@ PerfectScrollbar.scroll
 </template>
 
 <style scoped>
-.scroll {
-  height: 90%;
-  width: 100%;
-}
 
 * {
   color: #141414;
