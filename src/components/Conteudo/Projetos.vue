@@ -192,6 +192,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  padding: 15px
 }
 
 .box {
@@ -204,10 +205,8 @@ p {
   flex-direction: column;
   gap: 20px;
   position: relative;
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
   transition: 0.3s ease-in-out;
-  margin-bottom: 10px;
 }
 
 .box::before{
@@ -223,6 +222,10 @@ p {
   top: 1px;
   transform: translate(0, 0);
   transition: transform 0.3s ease-in-out;
+}
+
+.box:hover::before{
+  transform: translate(-6px,6px);
 }
 
 .menu {

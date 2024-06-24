@@ -168,6 +168,10 @@ span {
   transition: transform 0.3s ease-in-out;
 }
 
+.box:hover::before{
+  transform: translate(-6px,6px);
+}
+
 .box>span {
   color: var(--orange-dark);
   font-weight: bold;
