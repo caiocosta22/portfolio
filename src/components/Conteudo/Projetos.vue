@@ -5,7 +5,7 @@ import "vue3-perfect-scrollbar/style.css";
 const projetos = ref([
   {
     titulo: "Portfólio",
-    descricao: "lorem ipsum",
+    descricao: "Projeto pessoal com foco em apresentar minha identidade visual de forma simples.",
     imagem: "/images/projetos/portfolio.png",
     icons: [
       "fa-brands fa-vuejs",
@@ -16,7 +16,7 @@ const projetos = ref([
   },
   {
     titulo: "Sistema Catálogo",
-    descricao: "lorem ipsum",
+    descricao: "Sendo desevenvolvido para automatizar artes de catálogos de produtos para Agência Alastrar.",
     imagem: "/images/projetos/sistemacatalogo.png",
     icons: [
       "fa-brands fa-vuejs",
@@ -27,7 +27,7 @@ const projetos = ref([
   },
   {
     titulo: "Super Academy",
-    descricao: "lorem ipsum",
+    descricao: "Landing Page promocional de eventos com foco na venda de ingressos.",
     imagem: "/images/projetos/superacademy.png",
     icons: [
       "fa-brands fa-vuejs",
@@ -38,7 +38,7 @@ const projetos = ref([
   },
   {
     titulo: "Galeam Incorporadora",
-    descricao: "lorem ipsum",
+    descricao: "Site institucional da incorporadora, com foco em apresentar a empresa e seus principais projetos.",
     imagem: "/images/projetos/galeam.png",
     icons: [
       "fa-brands fa-vuejs",
@@ -48,7 +48,7 @@ const projetos = ref([
   },
   {
     titulo: "Super Supply",
-    descricao: "lorem ipsum",
+    descricao: "Landing page institucional da distribuidora Super Supply, com foco em apresentar suas soluções e serviços.",
     imagem: "/images/projetos/supersupply.png",
     icons: [
       "fa-brands fa-vuejs"
@@ -57,7 +57,7 @@ const projetos = ref([
   },
   {
     titulo: "Web Form",
-    descricao: "lorem ipsum",
+    descricao: "Pequeno protótipo de estudo de HTML e CSS proposto pelo programa Santander Coders 2024.",
     imagem: "/images/projetos/weform.png",
     icons: [
       "fa-brands fa-html5",
