@@ -33,13 +33,13 @@ section.principal
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 150px;
-  height: 90%;
+  height: 80vh;
 }
 
 .lateral {
   display: flex;
   flex-direction: column;
-  gap: 170px;
+  justify-content: space-between;
 }
 
 @media screen and (max-height: 800px) {

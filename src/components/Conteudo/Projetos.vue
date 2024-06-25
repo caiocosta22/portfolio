@@ -113,54 +113,55 @@ const dialogAtual = ref();
 </script>
 
 <template lang="pug">
-PerfectScrollbar
-  div.grid
-    div.box(
-      v-for="projeto in projetos"
-      :key="projeto"
-    )
-      div.menu
-        h6 {{ projeto.titulo }}
-        q-icon.botao(
-          name="fa-solid fa-expand"
-          @click="dialog = !dialog, filterDialog(projeto.id)"
-        )
-      p {{ projeto.descricao }}
-      div.imagem
-        img(
-          :src="projeto.imagem"
-        )
-      div.icones
-        q-icon(
-          v-for="icon in projeto.icons"
-          :key="icon"
-          :name="icon"
-          color="info"
-          size="sm"
-        )
-      a.link(
-        :href="projeto.link"
-        target="_blank"
-      ) {{ projeto.link }}
-q-dialog(
-  v-model="dialog"
-  backdrop-filter="blur(4px) saturate(150%)"
-)
-  q-card.dialog
-    q-card-section.row.items-center
-      h3 {{ dialogAtual[0].titulo }}
-      q-space
-      q-btn(
-        icon="close"
-        flat
-        round
-        dense
-        v-close-popup
+div.container
+  PerfectScrollbar.scroll
+    div.grid
+      div.box(
+        v-for="projeto in projetos"
+        :key="projeto"
       )
-    q-card-section
-      p(
-        v-html="dialogAtual[0].texto"
-      )
+        div.menu
+          h6 {{ projeto.titulo }}
+          q-icon.botao(
+            name="fa-solid fa-expand"
+            @click="dialog = !dialog, filterDialog(projeto.id)"
+          )
+        p {{ projeto.descricao }}
+        div.imagem
+          img(
+            :src="projeto.imagem"
+          )
+        div.icones
+          q-icon(
+            v-for="icon in projeto.icons"
+            :key="icon"
+            :name="icon"
+            color="info"
+            size="sm"
+          )
+        a.link(
+          :href="projeto.link"
+          target="_blank"
+        ) {{ projeto.link }}
+  q-dialog(
+    v-model="dialog"
+    backdrop-filter="blur(4px) saturate(150%)"
+  )
+    q-card.dialog
+      q-card-section.row.items-center
+        h3 {{ dialogAtual[0].titulo }}
+        q-space
+        q-btn(
+          icon="close"
+          flat
+          round
+          dense
+          v-close-popup
+        )
+      q-card-section
+        p(
+          v-html="dialogAtual[0].texto"
+        )
 </template>
 
 <style scoped>
@@ -168,6 +169,20 @@ q-dialog(
   line-height: 1.0;
   font-size: 1.0rem;
   line-height: 1.25;
+}
+
+.container {
+  height: 80vh;
+  border: 1px solid #000;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.ps {
+  height: 100%;
+  width: 98%;
+  margin: 0 auto;
+  padding: 20px 0px;
 }
 
 p, h6, h3 {
@@ -184,15 +199,11 @@ p {
   color: #141414;
 }
 
-.ps {
-  height: 670px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  padding: 15px
+  padding: 0px 15px;
 }
 
 .box {
@@ -207,6 +218,7 @@ p {
   position: relative;
   width: 100%;
   transition: 0.3s ease-in-out;
+
 }
 
 .box::before{
@@ -265,15 +277,4 @@ h3 {
   font-weight: 500;
 }
 
-@media screen and (max-width: 1240px) {
-  .ps {
-    height: 550px;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  .ps {
-    height: 440px;
-  }
-}
 </style>

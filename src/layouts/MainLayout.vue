@@ -28,10 +28,10 @@ q-layout.container(
 }
 
 .pagina {
-  height: 80%;
+  height: 80vh;
 }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width:1248px) {
   .container {
     padding: 0px 40px;
   }
