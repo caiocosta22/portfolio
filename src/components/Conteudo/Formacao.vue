@@ -100,7 +100,8 @@ p {
 
 @media screen and (max-width:1080px) {
   .grid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    padding: 15px 10px;
   }
 }
 

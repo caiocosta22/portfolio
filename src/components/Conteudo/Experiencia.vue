@@ -221,6 +221,9 @@ h6 {
     font-weight: 500;
     padding: 20px 0px 0px 20px;
   }
+  .container-box{
+    padding: 15px 10px;
+  }
 }
 @media screen and (max-width: 768px) {
   .box:hover::before{

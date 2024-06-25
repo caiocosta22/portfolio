@@ -65,7 +65,7 @@ section.principal
 .area {
   font-size: 1.8rem;
   font-weight: 500;
-  margin-bottom: 20px
+  margin-bottom: 5px
 }
 
 @media screen and (max-width:1080px) {
