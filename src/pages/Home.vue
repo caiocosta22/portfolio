@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from "vue";
 import { useMenuStore } from "src/stores/menu-store.js";
-import { Titulo, Menu, Sociais, Sobre, Experiencia, Projetos, Formacao } from "src/router/index.js";
+import { Titulo, Menu, Sociais, Sobre, Experiencia, Projetos, Formacao, Slider } from "src/router/index.js";
 
 const menuStore = useMenuStore();
 const menuAtual = computed(() => { return menuStore.menuAtual; });
@@ -31,7 +31,7 @@ section.principal
       Sobre
     article
       h2.area Projetos
-      Projetos
+      Slider
     article
       h2.area Experiência
       Experiencia
@@ -58,7 +58,8 @@ section.principal
 .mobile {
   display: flex;
   flex-direction: column;
-  gap: 20px
+  gap: 20px;
+  padding-bottom: 20px;
 }
 
 .area {

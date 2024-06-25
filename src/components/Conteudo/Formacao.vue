@@ -35,8 +35,8 @@ div.lista
     )
     p <b> Idiomas </b>
   div.flex.column
-    p <b> Inglês </b> / Intermediário
-    p <b> Português </b> / Nativo
+    p <b> Inglês </b> - Intermediário
+    p <b> Português </b> - Nativo
 </template>
 
 <style scoped>
@@ -101,6 +101,12 @@ p {
 @media screen and (max-width:1080px) {
   .grid {
     grid-template-columns: 1fr
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box:hover::before{
+    transform: none;
   }
 }
 </style>
