@@ -83,27 +83,27 @@ const dialogs = ref([
   {
     id: 2,
     titulo: "Sistema Catálogo",
-    texto: "lorem ipsum"
+    texto: "<p>Esse projeto tem um intuito de resolver uma problemática constante dentro da agência, que é a produção massiva de catálogos ser feito de forma manual.</p> <p>Catálogos de produtos são essenciais para nossos clientes, e fazer página por página de um catálogo, de centenas de páginas é um trabalho sobrehumano. </p> <p>Pra isso, decidi criar um sistema do zero com backend em NODE que será responsável, por capturar os produtos no banco de dados do cliente, e enviar em formato JSON para o front-end ler, e produzir uma lista estilizada da maneira que o cliente precisa, assim otimizando completamente o processo de criação dessas artes.</p>"
   },
   {
     id: 3,
     titulo: "Super Academy",
-    texto: "lorem ipsum"
+    texto: "<p>Aqui foi criada uma landing page para capturar clientes para um evento que vai acontecer em julho de 2024.</p><p> Fui responsável pela idealização, design e desenvolvimento completo da landing page, além de ter exercitado um conhecimento em relações a dominios e DNS. Pois, tive de criar um subdomínio no portal de hospedagem do cliente, e associar ao deploy da aplicação.</p><p>Trafego pago é extremamente eficiente para capturar pessoas para esses eventos, porém, uma landing page bem construída com um design sólido passa uma sensação de profissionalismo e permite apresentar o que será mostrado no evento para o visitante, assim funcionando de maneira mais efetiva para esse objetivo.</p>"
   },
   {
     id: 4,
     titulo: "Galeam Incorporadora",
-    texto: "lorem ipsum"
+    texto: "<p>Ironicamente, foi um dos projetos mais desafiadores que trabalhei, por conta da quantidade massiva de fotos e vídeos que foram enviadas pelo time de Design do cliente.</p> <p>Ter que aliar o desempenho da aplicação, com fotos e vídeos pesados foi um grande desafio de otimização que tive de passar para construir esse site, já que todo o Design foi projetado pelo time do cliente.</p> <p>Aqui aprendi muito sobre como funciona o Web Design Europeu, pois tive a oportunidade de trabalhar com um time que se localizava na Espanha, me comunicando em inglês com eles.</p>"
   },
   {
     id: 5,
     titulo: "Super Supply",
-    texto: "lorem ipsum"
+    texto: "<p>O primeiro projeto que desenvolvi para a Agência Alastrar, definitivamente, foi um divisor de águas pra mim.</p> <p>Por os estudos em prática foi bem mais difícil do que parece, apesar de ser uma simples landing page, tenho bastante carinho por esse projeto, já que foi minha primeira vez trabalhando aliado com um time de Design.</p>"
   },
   {
     id: 6,
     titulo: "Web Form",
-    texto: "lorem ipsum"
+    texto: "<p>Um simples projeto de estudo de HTML e CSS pra exercitar um pouco do que aprendi no programa. Gosto bastante dessa ilustração utilizada, e das cores que decidimos por na página, dão um toque muito confortável.</p> <p>Não apliquei javascript no projeto, já que não era necessário para finalização da task.</p>"
   }
 ]);
 const filterDialog = (id) => {
