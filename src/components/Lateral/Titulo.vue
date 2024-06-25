@@ -19,4 +19,25 @@ h3 {
   font-size: 1.2rem;
   font-weight: 300;
 }
+
+@media screen and (max-width:1080px) {
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  br {
+    display: none;
+  }
+  div {
+    margin-bottom: 20px
+  }
+}
+@media screen and (max-width:480px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+}
 </style>

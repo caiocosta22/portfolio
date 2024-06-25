@@ -7,22 +7,22 @@ const menuStore = useMenuStore();
 
 const menus = ref([
   {
-    titulo: "sobre",
+    titulo: "Sobre",
     isAtivo: true,
     id: 1
   },
   {
-    titulo: "experiência",
+    titulo: "Projetos",
     isAtivo: false,
     id: 2
   },
   {
-    titulo: "projetos",
+    titulo: "Experiência",
     isAtivo: false,
     id: 3
   },
   {
-    titulo: "formação",
+    titulo: "Formação",
     isAtivo: false,
     id: 4
   }

@@ -30,7 +30,8 @@ div.flex
 
 <style scoped>
 .flex {
-  gap: 15px
+  gap: 15px;
+  margin-bottom: 20px
 }
 
 .icons {

@@ -11,21 +11,34 @@ const menuAtual = computed(() => { return menuStore.menuAtual; });
 section.principal
   section.lateral
     Titulo
-    Menu
+    Menu.desktop
     Sociais
-  section.conteudo
+  section.conteudo.desktop
     Sobre(
       v-if="menuAtual === 1 "
     )
-    Experiencia(
+    Projetos(
       v-if="menuAtual === 2 "
     )
-    Projetos(
+    Experiencia(
       v-if="menuAtual === 3 "
     )
     Formacao(
       v-if="menuAtual === 4 "
     )
+  section.mobile
+    article
+      Sobre
+    article
+      h2.area Projetos
+      Projetos
+    article
+      h2.area Experiência
+      Experiencia
+    article
+      h2.area Formação
+      Formacao
+
 </template>
 
 <style scoped>
@@ -42,9 +55,39 @@ section.principal
   justify-content: space-between;
 }
 
-@media screen and (max-height: 800px) {
+.mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.area {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 20px
+}
+
+@media screen and (max-width:1080px) {
   .lateral {
-    gap: 120px;
+    justify-content:inherit
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .principal {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 0px
+  }
+
+}
+
+@media screen and (min-width:1080px) {
+  .mobile {
+    display: none;
   }
 }
 </style>

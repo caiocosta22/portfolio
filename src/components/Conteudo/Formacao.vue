@@ -93,7 +93,14 @@ p {
   flex-direction: column;
   gap: 10px;
 }
+
 .flex {
   gap: 10px;
+}
+
+@media screen and (max-width:1080px) {
+  .grid {
+    grid-template-columns: 1fr
+  }
 }
 </style>

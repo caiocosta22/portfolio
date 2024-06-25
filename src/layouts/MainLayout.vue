@@ -36,4 +36,10 @@ q-layout.container(
     padding: 0px 40px;
   }
 }
+
+@media screen and (max-width:480px) {
+  .container {
+    padding: 0px 20px;
+  }
+}
 </style>
