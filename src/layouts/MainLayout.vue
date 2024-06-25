@@ -33,13 +33,8 @@ q-layout.container(
 
 @media screen and (max-width:1248px) {
   .container {
-    padding: 0px 40px;
-  }
-}
-
-@media screen and (max-width:480px) {
-  .container {
     padding: 0px 20px;
   }
 }
+
 </style>
