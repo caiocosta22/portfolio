@@ -46,7 +46,6 @@ section.principal
     )
       h2.area Formação
       Formacao
-
 </template>
 
 <style scoped>
@@ -80,7 +79,8 @@ section.principal
 
 @media screen and (max-width:1080px) {
   .lateral {
-    justify-content:inherit
+    justify-content:inherit;
+    max-height: 100%;
   }
 
   .desktop {

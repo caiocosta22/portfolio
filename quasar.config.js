@@ -100,7 +100,7 @@ module.exports = configure(function (/* ctx */) {
           timeout: 1000,
           actions: [{ icon: "close", color: "white" }]
         },
-        dark: false
+        dark: "auto"
       },
 
       // iconSet: 'material-icons', // Quasar icon set

@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
-const pdf = ref("https://drive.google.com/file/d/103eyPu_UzIym3jMrR73-DmYe7TZtzyMQ/view?usp=sharing");
+const pdf = ref("https://drive.google.com/file/d/1qxR7NSKlZjife6NjfLk45asSQuHpPes3/view?usp=sharing");
 </script>
 
 <template lang="pug">
@@ -20,7 +20,7 @@ div
   )
     q-btn(
       color="info"
-      style="border-radius:20px; border:1px solid   #141414;  box-shadow:none"
+      style="border-radius:20px; border:1px solid #141414;  box-shadow:none"
     )
       span Download CV
 </template>
