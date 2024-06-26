@@ -27,15 +27,23 @@ section.principal
       v-if="menuAtual === 4 "
     )
   section.mobile
-    article
+    article(
+      id="SOBRE"
+    )
       Sobre
-    article
+    article(
+      id="PROJETOS"
+    )
       h2.area Projetos
       Slider
-    article
+    article(
+      id="EXPERIENCIA"
+    )
       h2.area Experiência
       Experiencia
-    article
+    article(
+      id="FORMACAO"
+    )
       h2.area Formação
       Formacao
 
