@@ -85,7 +85,7 @@ q-layout.container(
   }
 }
 
-@media screen and (max-width:1080px) {
+@media screen and (min-width:1080px) {
   .floating-button2 {
     display: none;
   }
