@@ -54,6 +54,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
+  padding: 20px 15px
 }
 
 .box {
@@ -92,6 +93,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 0px 15px
 }
 
 .flex {
