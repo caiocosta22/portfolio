@@ -152,8 +152,9 @@ div.container
           div.menu
             h6 {{ projeto.titulo }}
             q-icon.botao(
-              name="fa-solid fa-expand"
-              @click="dialog = !dialog, filterDialog(projeto.id)"
+              name="fa-solid fa-circle-info"
+              @click="dialog = !dialog,   filterDialog(projeto.id)"
+              size="sm"
             )
           p {{ projeto.descricao }}
           div.imagem

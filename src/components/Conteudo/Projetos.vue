@@ -122,8 +122,9 @@ PerfectScrollbar
       div.menu
         h6 {{ projeto.titulo }}
         q-icon.botao(
-          name="fa-solid fa-expand"
+          name="fa-solid fa-circle-info"
           @click="dialog = !dialog, filterDialog(projeto.id)"
+          size="xs"
         )
       p {{ projeto.descricao }}
       div.imagem
