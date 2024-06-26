@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from "vue";
+import { PerfectScrollbar } from "vue3-perfect-scrollbar";
+import "vue3-perfect-scrollbar/style.css";
 const jobs = ref([
   {
     empresa: "Agência Alastrar",
@@ -80,37 +82,38 @@ const jobs = ref([
 </script>
 
 <template lang="pug">
-div.container-box
-  div.box(
-    v-for="job in jobs"
-    :key="job"
-  )
-    h6 {{ job.empresa }}
-    div.grid
-      div.textos
-        p(
-          v-html="job.descricao"
-        )
-      div.cargo
-        q-separator.separator(
-          vertical
-          color="warning"
-        )
-        div.flex.column
-          h6.titulo-cargo {{ job.titulo }} <br>
-          h6.titulo-cargo(
-            v-if="job.subtitulo"
-          ) {{ job.subtitulo }}
-          div.icones
-            q-icon(
-              v-for="icon in job.icons"
-              :key="icon"
-              :name="icon.name"
-              size="sm"
-              color="info"
-            )
-    span {{ job.tempo }} <br>
-    span
+PerfectScrollbar
+  div.container-box
+    div.box(
+      v-for="job in jobs"
+      :key="job"
+    )
+      h6 {{ job.empresa }}
+      div.grid
+        div.textos
+          p(
+            v-html="job.descricao"
+          )
+        div.cargo
+          q-separator.separator(
+            vertical
+            color="warning"
+          )
+          div.flex.column
+            h6.titulo-cargo {{ job.titulo }} <br>
+            h6.titulo-cargo(
+              v-if="job.subtitulo"
+            ) {{ job.subtitulo }}
+            div.icones
+              q-icon(
+                v-for="icon in job.icons"
+                :key="icon"
+                :name="icon.name"
+                size="sm"
+                color="info"
+              )
+      span {{ job.tempo }} <br>
+      span
 </template>
 
 <style scoped>
@@ -118,6 +121,13 @@ div.container-box
 * {
   color: #141414;
   line-height: 1.25;
+}
+
+.ps {
+  height: 90vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0px
 }
 
 p, h6 {
@@ -134,7 +144,8 @@ span {
   max-height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 25px
+  gap: 20px;
+  padding: 0px 15px;
 }
 
 .box {
@@ -144,7 +155,7 @@ span {
   border: 1px solid #000;
   position: relative;
   margin: 0 auto;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .box::before{
@@ -207,6 +218,30 @@ h6 {
   padding-top: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .box:hover::before{
+    transform: none;
+  }
+}
+
+@media screen and (max-height:920px) {
+  .ps {
+    height: 88vh
+  }
+}
+
+@media screen and (max-height:760px) {
+  .ps {
+    height: 85vh
+  }
+}
+
+@media screen and (max-height:600px) {
+  .ps {
+    height: 82vh
+  }
+}
+
 @media screen and (max-width: 1080px) {
   .grid {
     grid-template-columns: 1fr;
@@ -224,10 +259,9 @@ h6 {
   .container-box{
     padding: 15px 10px;
   }
-}
-@media screen and (max-width: 768px) {
-  .box:hover::before{
-    transform: none;
+  .ps {
+    padding: 0px;
+    height: 100% !important;
   }
 }
 </style>

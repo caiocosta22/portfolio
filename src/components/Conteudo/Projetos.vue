@@ -113,36 +113,35 @@ const dialogAtual = ref();
 </script>
 
 <template lang="pug">
-div.container
-  PerfectScrollbar.scroll
-    div.grid
-      div.box(
-        v-for="projeto in projetos"
-        :key="projeto"
-      )
-        div.menu
-          h6 {{ projeto.titulo }}
-          q-icon.botao(
-            name="fa-solid fa-expand"
-            @click="dialog = !dialog, filterDialog(projeto.id)"
-          )
-        p {{ projeto.descricao }}
-        div.imagem
-          img(
-            :src="projeto.imagem"
-          )
-        div.icones
-          q-icon(
-            v-for="icon in projeto.icons"
-            :key="icon"
-            :name="icon"
-            color="info"
-            size="sm"
-          )
-        a.link(
-          :href="projeto.link"
-          target="_blank"
-        ) {{ projeto.link }}
+PerfectScrollbar
+  div.grid
+    div.box(
+      v-for="projeto in projetos"
+      :key="projeto"
+    )
+      div.menu
+        h6 {{ projeto.titulo }}
+        q-icon.botao(
+          name="fa-solid fa-expand"
+          @click="dialog = !dialog, filterDialog(projeto.id)"
+        )
+      p {{ projeto.descricao }}
+      div.imagem
+        img(
+          :src="projeto.imagem"
+        )
+      div.icones
+        q-icon(
+          v-for="icon in projeto.icons"
+          :key="icon"
+          :name="icon"
+          color="info"
+          size="sm"
+        )
+      a.link(
+        :href="projeto.link"
+        target="_blank"
+      ) {{ projeto.link }}
   q-dialog(
     v-model="dialog"
     backdrop-filter="blur(4px) saturate(150%)"
@@ -171,18 +170,11 @@ div.container
   line-height: 1.25;
 }
 
-.container {
-  height: 80vh;
-  border: 1px solid #000;
-  border-radius: 15px;
-  box-sizing: border-box;
-}
-
 .ps {
-  height: 100%;
-  width: 98%;
+  max-height: 90vh;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px 0px;
+  padding: 20px 0px
 }
 
 p, h6, h3 {
@@ -211,14 +203,13 @@ p {
   border: 1px solid #000;
   color: #141414;
   border-radius: 20px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: relative;
   width: 100%;
   transition: 0.3s ease-in-out;
-
+  padding: 20px;
 }
 
 .box::before{
@@ -277,4 +268,19 @@ h3 {
   font-weight: 500;
 }
 
+@media screen and (max-height:920px) {
+  .ps {
+    height: 88vh
+  }
+}
+@media screen and (max-height:760px) {
+  .ps {
+    height: 85vh
+  }
+}
+@media screen and (max-height:600px) {
+  .ps {
+    height: 82vh
+  }
+}
 </style>
