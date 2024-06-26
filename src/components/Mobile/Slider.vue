@@ -7,7 +7,7 @@ const settings = ref({
   itemsToShow: 2,
   snapAlign: "start",
   wrapAround: true,
-  autoplay: 2000
+  autoplay: 5000
 });
 
 const breakpoints = ref({
