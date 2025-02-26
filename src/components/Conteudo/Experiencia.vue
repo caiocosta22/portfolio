@@ -4,6 +4,32 @@ import { PerfectScrollbar } from "vue3-perfect-scrollbar";
 import "vue3-perfect-scrollbar/style.css";
 const jobs = ref([
   {
+    empresa: "Hapvida NotreDame Intermédica",
+    titulo: "Analista de Sistemas",
+    descricao: "Responsável por revisar e implementar processos de automação com python, usando selenium, pandas e streamlit.<br> Arquitetar, desenvolver, testar e modelar sistemas fullstack visando aumento de produtividade do setor usando Vue3, Node, Fastfy, SQL SERVER e PM2 para deploy e monitoramento dos servidores.<br> Analisar e criar escalas para os gestores de todo o call center.",
+    icons: [
+      {
+        name: "fa-brands fa-vuejs"
+      },
+      {
+        name: "fa-brands fa-figma"
+      },
+      {
+        name: "fa-brands fa-sass"
+      },
+      {
+        name: "fa-brands fa-node-js"
+      },
+      {
+        name: "fa-brands fa-python"
+      },
+      {
+        name: "fa-solid fa-database"
+      }
+    ],
+    tempo: "10/2024 - Atuando"
+  },
+  {
     empresa: "Agência Alastrar",
     titulo: "Desenvolvedor Fullstack",
     descricao: "Utilizando Vue 3 junto ao Quasar Framework para desenvolver landing pages e hotsites para empresas, criando e manipulando interfaces com o Figma Design, utilizando NODE para criar microsserviços que comuniquem-se ao front. Deploys para servidores FTP via GitHub Actions.",
@@ -21,7 +47,7 @@ const jobs = ref([
         name: "fa-brands fa-node-js"
       }
     ],
-    tempo: "10/2023 - Atuando"
+    tempo: "10/2023 - 10/2024"
   },
   {
     empresa: "G2 Sistemas",

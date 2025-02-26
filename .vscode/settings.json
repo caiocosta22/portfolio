@@ -20,7 +20,7 @@
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "explorer.confirmDelete": false,
-  "workbench.colorTheme": "Shades of Purple",
+  "workbench.colorTheme": "Origamid Next",
   "workbench.iconTheme": "origamid-next-icons",
   "editor.fontSize": 16,
   "editor.lineHeight": 1.75,

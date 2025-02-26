@@ -3,7 +3,7 @@
 
 <template lang="pug">
 div
-  h2 Desenvolvedor <br> Front-End
+  h2 Desenvolvedor <br> Fullstack
   h3 simples e rápido.
 </template>
 

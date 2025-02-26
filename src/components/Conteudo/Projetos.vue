@@ -4,28 +4,41 @@ import { PerfectScrollbar } from "vue3-perfect-scrollbar";
 import "vue3-perfect-scrollbar/style.css";
 const projetos = ref([
   {
+    id: 12,
+    titulo: "Hapvida Produtiva",
+    descricao: "Sistema fullstack que centraliza, controle e monitora todas as demandas, colaboradores e indicadores do setor de Análise e planejamento Hapvida.",
+    imagem: "/images/projetos/hapvidaprodutiva.png",
+    icons: [
+      "fa-brands fa-vuejs",
+      "fa-brands fa-sass",
+      "fa-brands fa-figma",
+      "fa-brands fa-node"
+    ],
+    link: ""
+  },
+  {
+    id: 10,
+    titulo: "Plataforma FOCO",
+    descricao: "Plataforma criada para vender um serviço focado na facilitação da preparação de concursos públicos utilizando IA. Uma participação em um TCC de design.",
+    imagem: "/images/projetos/foco.png",
+    icons: [
+      "fa-brands fa-vuejs",
+      "fa-brands fa-sass",
+      "fa-brands fa-figma"
+    ],
+    link: "https://foco-orpin.vercel.app"
+  },
+  {
     id: 1,
     titulo: "Portfólio",
-    descricao: "Projeto pessoal com foco em apresentar minha identidade visual de forma simples.",
-    imagem: "/images/projetos/portfolio.png",
+    descricao: "Projeto pessoal com foco em apresentar minha identidade visual e um pouco dos meus conhecimentos de programação de forma simples.",
+    imagem: "/images/projetos/portfolio2.png",
     icons: [
       "fa-brands fa-vuejs",
       "fa-brands fa-sass",
       "fa-brands fa-figma"
     ],
     link: "https://github.com/caiocosta22/portfolio"
-  },
-  {
-    id: 2,
-    titulo: "Sistema Catálogo",
-    descricao: "Sendo desevenvolvido para automatizar artes de catálogos de produtos para Agência Alastrar.",
-    imagem: "/images/projetos/sistemacatalogo.png",
-    icons: [
-      "fa-brands fa-vuejs",
-      "fa-brands fa-node-js",
-      "fa-solid fa-database"
-    ],
-    link: ""
   },
   {
     id: 3,
@@ -37,7 +50,7 @@ const projetos = ref([
       "fa-brands fa-sass",
       "fa-brands fa-figma"
     ],
-    link: "https://superacademy.supersupply.com.br"
+    link: "https://https://super-academy.vercel.app"
   },
   {
     id: 4,
@@ -81,9 +94,15 @@ const dialogs = ref([
     texto: "<p> Em termos de Design, meu principal objetivo foi mostrar pro usuário minha identidade visual como nunca pude trabalhar em outros projetos antes. Por conta disso, utilizei tantas bordas pretas ao redor dos elementos de forma arrendoda, pra trazer uma sensação lúdica e confortável, amo ilustrações, e cartoons dos anos 30, eles carregam esse traço preto em volta dos personagens bem forte que quis adaptar para o projeto de alguma forma. </p> <img src='/images/projetos/cartoons.png' /> <p> <br> Outro grande desafio, com certeza foram as cores, passei horas no figma prototipando cores, principalmente, quando se trata de modo escuro, o modo claro sempre foi fácil de visualizar, por conta da minha paixão por tons pastéis, mas o escuro, foi um grande desafio que com certeza me levou muitas horas.</p> <img src='/images/projetos/cores.png' /> <br> <p> Quando chegamos no desenvolvimento, quis utilizar a componentização que o Vue me permite pra mostrar um pouco das minhas skills além da estilização, como os dialogos abertos ao clicar nos cards, o menu lateral reativo para gerar uma renderização dinâmica dos conteúdos, a utilização de um componente de scroll area para permitir o usuário explorar o conteúdo sem sair do foco do site, assim explorando um pouquinho do que aprendi nesse meu tempo como desenvolvedor front-end. </p>"
   },
   {
-    id: 2,
-    titulo: "Sistema Catálogo",
-    texto: "<p>Esse projeto tem um intuito de resolver uma problemática constante dentro da agência, que é a produção massiva de catálogos ser feito de forma manual.</p> <p>Catálogos de produtos são essenciais para nossos clientes, e fazer página por página de um catálogo, de centenas de páginas é um trabalho sobrehumano. </p> <p>Pra isso, decidi criar um sistema do zero com backend em NODE que será responsável, por capturar os produtos no banco de dados do cliente, e enviar em formato JSON para o front-end ler, e produzir uma lista estilizada da maneira que o cliente precisa, assim otimizando completamente o processo de criação dessas artes.</p>"
+    id: 10,
+    titulo: "Plataforma FOCO",
+    texto: "<p> Participar diretamente como o desenvolvedor de um projeto de TCC foi um desafio/prazer e tanto.<br><br> Conseguir dar vida ao projeto criado no Figma pela designer responsável foi uma experiência extremamente positiva, pude aprender ainda mais da ferramenta com a estudante.<br><br> O serviço em si tem como foco descomplicar o processo de estudos de concursos públicos no Brasil.<br><br> Assim sendo uma plataforma bem mais focada na experiência móvel, também contendo um protótipo de interação com uma IA que analisa editais e te retorna cronogramas adequados de estudo, tornando o processo bem mais organizado.<br><br> <img src='/images/projetos/foco2.png'/>  </p>"
+  },
+
+  {
+    id: 12,
+    titulo: "Hapvida",
+    texto: "<p>Ao chegar na empressa esse de já foi de cara um dos meus primeiros desafios. <br><br> <img src='/images/projetos/produtiva2.png'/> <br> <br> Conseguir criar um sistema fullstack, no qual os gestores possam cadastrar demandas, pessoas e suas habilidades, solicitações de setores externos, levantar relatórios, planejar orçamentos etc.<br><br> <img src='/images/projetos/produtiva3.png'/> <br><br> Arquitetar, levantar os requisitos, desenvolver, modelar o banco, testar e deployar o sistema sozinho foi bem puxado, mas valeu muito a pena com a quantidade de aprendizado que eu tive.<br><br> Hoje poder ver o sistema rodando todos os dias e sendo usado pelos gestores do setor me enche de orgulho e me ajuda a enxergar melhor minha evolução como desenvolvedor fullstack.<br><br> <img src='/images/projetos/produtiva4.png'/> <br> <br>Tecnologias: VUE3, FIGMA, SASS, NODEJS, SQL SERVER, PM2 <br><br> Dados borrados para privacidade da empresa.</p>"
   },
   {
     id: 3,
@@ -119,30 +138,32 @@ PerfectScrollbar
       v-for="projeto in projetos"
       :key="projeto"
     )
-      div.menu
-        h6 {{ projeto.titulo }}
-        q-icon.botao(
-          name="fa-solid fa-circle-info"
-          @click="dialog = !dialog, filterDialog(projeto.id)"
-          size="xs"
-        )
-      p {{ projeto.descricao }}
+      div.flex.column
+        div.menu
+          h6 {{ projeto.titulo }}
+          q-icon.botao(
+            name="fa-solid fa-circle-info"
+            @click="dialog = !dialog, filterDialog(projeto.id)"
+            size="xs"
+          )
+        p {{ projeto.descricao }}
       div.imagem
         img(
           :src="projeto.imagem"
         )
-      div.icones
-        q-icon(
-          v-for="icon in projeto.icons"
-          :key="icon"
-          :name="icon"
-          color="info"
-          size="sm"
-        )
-      a.link(
-        :href="projeto.link"
-        target="_blank"
-      ) {{ projeto.link }}
+      div.flex.column
+        div.icones.q-mb-sm
+          q-icon(
+            v-for="icon in projeto.icons"
+            :key="icon"
+            :name="icon"
+            color="info"
+            size="sm"
+          )
+        a.link(
+          :href="projeto.link"
+          target="_blank"
+        ) {{ projeto.link }}
   q-dialog(
     v-model="dialog"
     backdrop-filter="blur(4px) saturate(150%)"
@@ -206,11 +227,12 @@ p {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   position: relative;
   width: 100%;
   transition: 0.3s ease-in-out;
   padding: 20px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .box::before{

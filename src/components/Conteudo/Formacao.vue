@@ -12,7 +12,7 @@ const menus = ref([
     tipo: "Tecnólogo",
     titulo: "Análise e Desenvolvimento de Sistemas",
     local: "Estácio",
-    tempo: "2022 - Cursando"
+    tempo: "2022 - 2025 - Completo"
   }
 ]);
 </script>
