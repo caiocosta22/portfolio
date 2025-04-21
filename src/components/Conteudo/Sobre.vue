@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
-const pdf = ref("https://drive.google.com/file/d/1v6fAo6g0E3V7OJgNSNerr3DE6OWpoKON/view?usp=sharing");
+const pdf = ref("https://docs.google.com/document/d/1X-PCGHhxWwtEVgC3lWNfyQ9qOjCircTbiqtMxvehFLA/edit?usp=sharing");
 </script>
 
 <template lang="pug">
